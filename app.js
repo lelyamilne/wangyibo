@@ -1,5 +1,3 @@
-
-
 const questionNumber = document.querySelector(".question-number");
 const questionText = document.querySelector(".question-text");
 const optionContainer = document.querySelector(".option-container");
@@ -34,6 +32,12 @@ function getNewQuestion(){
 	const index1 = availebleQuestions.indexOf(questionIndex);
 	//remove the 'questionIndex' from the availebleQuestion Arrey, so that the question does not repeat
 	availebleQuestions.splice(index1, 1);
+	
+	if(currentQuestion.hasOwnProperty("img")){
+		const img = document.createElement("img");
+		img.src = currentQuestion.img;
+		questionText.appendChild(img);
+	}
 	
 	
 	//set options
