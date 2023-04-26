@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Учим иероглифы</title>
+	<link rel="stylesheet" href="style.css" type="text/css"/>	
+</head>
+<body>
+	<div class="home-box custom-box">
+		<h3>Инструкция:</h3>
+		<p>Количество вопросов: <span class="total-question"></span></p>
+		<button type="button" class="btn" onclick="startQuiz()">Начать тест</button>
+	</div>
+	<div class="quiz-box custom-box hide">
+		<div class="question-number">
+			
+		</div>
+		<div class="question-text">
+
+		</div>
+		<div class="option-container">
+			
+		</div>
+		<div class="next-question-btn">
+			<button type="button" class="btn" onclick="next()">Следующий вопрос</button>
+		</div>
+		<div class="answers-indicator">
+			
+		</div>
+	</div>
+	<div class="result-box custom-box hide">
+		<h1>Результат теста</h1>
+		<table>
+			<tr>
+				<td>Всего вопросов</td>
+				<td><span class="total-question"></td>
+			</tr>
+			<tr>
+				<td>Отвечено на</td>
+				<td><span class="total-attempt"></td>
+			</tr>
+			<tr>
+				<td>Правельных ответов</td>
+				<td><span class="total-correct"></td>
+			</tr>
+			<tr>
+				<td>Неравельных ответов</td>
+				<td><span class="total-wrong"></td>
+			</tr>
+			<tr>
+				<td>Процент выполнения</td>
+				<td><span class="total-procentage"></td>
+			</tr>
+			<tr>
+				<td>Ваш общий балл</td>
+				<td><span class="total-score"></td>
+			</tr>
+		</table>
+		<button type="button" class="btn" onclick="tryAgainQuiz()">Поройти снова</button>
+		<style>
+			a{
+				color: white;
+				text-decoration: none;
+			}
+		</style>
+		<button type="button" class="btn"><a href="index.html" title="Главная страница">Главная страница</button>
+	</div>
+
+<script src="question1.js"></script>
+<script src="app2.js"></script>
+</body>
+</html>
