@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Главная страница</title>
+	<link rel="stylesheet" href="erth.css" type="text/css"/>
+		
+</head>
+<body>
+	<header>
+		<div id="logo" onclick="slowScroll('#top')">
+			<span>《The Untamed》</span>
+		</div>
+		<div id="about">
+			<a href="SWAG.html" title="Выбор актёра" onclick="slowScroll('#main')">Выбор актёра</a>
+			<a href="index1.html" title="Кто на фото?" onclick="slowScroll('#overiew')">Кто на фото?</a>
+		</div>
+	</header>
+
+	<div id="top">
+		<h1>Запомни имена своих кумиров</h1>
+		<h3>Мы поможем сделать вашу жизнь фаната проще!</h3>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script>
+		function slowScroll(id){
+			$('body').animate({
+				scrollTop: $(id).offset().top
+			}, 500);
+		}
+		$(document).on("scroll", function (){
+			if($(window).scrollTop() === 0)
+				$("header").removeClass("fixed");
+			else
+				$("header").attr("class", "fixed");
+		});
+	</script>
+
+
+	<div id="main">
+		<div class="intro">
+			<h2>Что нужно сделать?</h2>
+		</div>
+		<div class="text">
+			<span>1. Кликнуть на ссылку "Выбро актёров"</span><br>
+			<span>2. Выбрать интересующего актёра</span><br>
+			<span>3. После прохождения всех тестов с актёрами выберать тест "Кто на фото" на главной странице</span><br>
+			<span>4. Помнить, что всё получится!</span>
+		</div>
+	</div>
+	<div id="overview">
+		<h2>Вы сможете:</h2>
+		<h4>выучить имена любимых актёров, таких как</h4>
+		<div class="img">
+			<img src="https://www.film.ru/sites/default/files/people/21131648-1157823.jpg" width="500" alt="">
+			<span>王一博 - Ван Ибо</span>
+		</div>
+		<div class="img">
+			<img src="https://beiranossa.pt/img/sean-xiao/F9/xiao-zhan-profile-and-facts-1.jpg" width="500" alt="">
+			<span>肖战 - Сяо Чжань</span>
+		</div>
+	</div>
+
+	
+</body>
+</html>
