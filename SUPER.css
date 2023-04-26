@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Philosopher&family=Shantell+Sans:wght@300&display=swap');
+
+
+body{
+	margin: 0;
+	font-size: 16px;
+	background-color: #000000;
+	font-family: 'Philosopher', sans-serif;
+	font-weight: 400;
+}
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+.custom-box{
+	max-width: 700px;
+	background-color: #ffffff;
+	margin:40px auto;
+	padding: 30px;
+	border-radius: 10px;
+}
+.custom-box::before,
+.custom-box::after{
+	content: '';
+	clear: both;
+	display: table;
+}
+.custom-box.hide{
+	display: none;
+}
+
+
+
+.quiz-box .question-text,
+.quiz-box .option-container{
+	width: 100%;
+	float: left;
+}
+
+.quiz-box .question-text{
+	font-size: 22px;
+	color: #000000;
+	line-height: 28px;
+	font-weight: 400;
+	padding: 20px 0;
+	margin: 0;
+}
+
+.quiz-box .option-container .option{
+	background-color: #cccccc;
+	padding: 13px 15px;
+	font-size: 16px;
+	line-height: 22px;
+	color: #000000;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	text-transform: capitalize;
+}
+
+@media(max-width: 767px){
+	.result-box .btn{
+		margin-bottom: 15px;
+	}
+	body{
+		padding: 15px;
+	}
+}
+
